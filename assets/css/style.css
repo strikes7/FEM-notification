@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+  padding: 1.5rem 1rem 5rem;
+  display: flex;
+  grid-template-columns: 1fr;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  background-color: hsl(0, 0%, 100%);
+}

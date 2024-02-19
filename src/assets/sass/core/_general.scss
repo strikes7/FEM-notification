@@ -1,0 +1,10 @@
+@use "../abstract/" as *;
+
+body {
+  margin: 0;
+  padding: 1.5rem 1rem 5rem;
+  display: flex;
+  grid-template-columns: 1fr;
+  font-family: $ff-primary;
+  background-color: $clr-neutral-100;
+}
