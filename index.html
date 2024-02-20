@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -14,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -23,11 +21,12 @@
   <body>
     <main>
       <header class="notifications-header">
-        <h2 class="notification-header__title">Notifications<span>3</span></h2>
+        <h2 class="notifications-header__title">Notifications</h2>
+        <span class="notifications-header__counter">3</span>
         <button id="mark-as-read" type="button">Mark all as read</button>
       </header>
       <ul class="comments">
-        <li class="comment">
+        <li class="comment" data-is-read="false">
           <img
             src="assets/images/avatar-mark-webber.webp"
             width="90"
@@ -35,15 +34,16 @@
             alt="Mark Webber"
             class="comment__author-thumb"
           />
-          <div class="comment-wrapper" data-is-read="false">
+          <div class="comment-wrapper">
             <p class="comment__text">
-              <span class="comment__author-name">Mark Webber</span> reacted to
-              your recent post My first tournament today!
+              <a href="#" class="comment__author-name">Mark Webber</a> reacted
+              to your recent post
+              <a href="#" class="user-content">My first tournament today!</a>
             </p>
             <p class="comment__date">1m ago</p>
           </div>
         </li>
-        <li class="comment">
+        <li class="comment" data-is-read="false">
           <img
             src="assets/images/avatar-angela-gray.webp"
             width="90"
@@ -51,14 +51,15 @@
             alt="Angela Gray"
             class="comment__author-thumb"
           />
-          <div class="comment-wrapper" data-is-read="false">
+          <div class="comment-wrapper">
             <p class="comment__text">
-              <span class="comment__author-name">Angela Gray</span> followed you
+              <a href="#" class="comment__author-name">Angela Gray</a> followed
+              you
             </p>
             <p class="comment__date">5m ago</p>
           </div>
         </li>
-        <li class="comment">
+        <li class="comment" data-is-read="false">
           <img
             src="assets/images/avatar-jacob-thompson.webp"
             width="90"
@@ -66,10 +67,10 @@
             alt="Jacob Thompson"
             class="comment__author-thumb"
           />
-          <div class="comment-wrapper" data-is-read="false">
+          <div class="comment-wrapper">
             <p class="comment__text">
-              <span class="comment__author-name">Jacob Thompson</span> has
-              joined your group <span class="user-group">Chess Club</span>
+              <a href="#" class="comment__author-name">Jacob Thompson</a> has
+              joined your group <a href="#" class="user-content">Chess Club</a>
             </p>
             <p class="comment__date">1 day ago</p>
           </div>
@@ -82,17 +83,19 @@
             alt="Rizky Hasanuddin"
             class="comment__author-thumb"
           />
-          <div class="comment-wrapper" data-is-read="false">
+          <div class="comment-wrapper">
             <p class="comment__text">
-              <span class="comment__author-name">Rizky Hasanuddin</span> sent
+              <a href="#" class="comment__author-name">Rizky Hasanuddin</a> sent
               you a private message
             </p>
             <p class="comment__date">5 days ago</p>
-            <p class="comment__message">
-              Hello, thanks for setting up the Chess Club. I've been a member
-              for a few weeks now and I'm already having lots of fun and
-              improving my game.
-            </p>
+            <a href="#" class="user-message">
+              <p class="comment__message">
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </p>
+            </a>
           </div>
         </li>
         <li class="comment">
@@ -103,16 +106,19 @@
             alt="Kimberly Smith"
             class="comment__author-thumb"
           />
-          <div class="comment-wrapper" data-is-read="false">
+          <div class="comment-wrapper">
+            <a href="#" class="user-picture">
+              <img
+                src="assets/images/image-chess.webp"
+                width="90"
+                height="90"
+                alt="chess match"
+              />
+            </a>
             <p class="comment__text">
-              <span class="comment__author-name">Kimberly Smith</span> commented
-              on your picture
+              <a href="#" class="comment__author-name">Kimberly Smith</a>
+              commented on your picture
             </p>
-            <img
-              src="assets/images/image-chess.webp"
-              alt="chess match"
-              class="user-picture"
-            />
             <p class="comment__date">1 week ago</p>
           </div>
         </li>
@@ -124,12 +130,12 @@
             alt="Nathan Peterson"
             class="comment__author-thumb"
           />
-          <div class="comment-wrapper" data-is-read="false">
+          <div class="comment-wrapper">
             <p class="comment__text">
-              <span class="comment__author-name">Nathan Peterson</span> reacted
-              to your recent post
-              <span class="user-post"
-                >5 end-game strategies to increase your win rate</span
+              <a href="#" class="comment__author-name">Nathan Peterson</a>
+              reacted to your recent post
+              <a href="#" class="user-content"
+                >5 end-game strategies to increase your win rate</a
               >
             </p>
             <p class="comment__date">2 weeks ago</p>
@@ -143,10 +149,11 @@
             alt="Anna Kim"
             class="comment__author-thumb"
           />
-          <div class="comment-wrapper" data-is-read="false">
+          <div class="comment-wrapper">
             <p class="comment__text">
-              <span class="comment__author-name">Anna Kim</span> left the group
-              <span class="user-group">Chess Club</span>
+              <a href="#" class="comment__author-name">Anna Kim</a> left the
+              group
+              <a href="#" class="user-content">Chess Club</a>
             </p>
             <p class="comment__date">2 weeks ago</p>
           </div>

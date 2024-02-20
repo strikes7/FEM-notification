@@ -4,7 +4,20 @@ body {
   margin: 0;
   padding: 1.5rem 1rem 5rem;
   display: flex;
-  grid-template-columns: 1fr;
+  justify-content: center;
   font-family: $ff-primary;
+  background-color: $clr-neutral-200;
+}
+
+main {
+  box-sizing: border-box;
+  max-width: 730px;
   background-color: $clr-neutral-100;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+  border-radius: 0.85rem;
+}
+
+a,
+button {
+  outline-offset: 4px;
 }
